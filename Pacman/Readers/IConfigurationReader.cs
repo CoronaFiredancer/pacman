@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Autofac;
-using Pacman.Readers;
 
-namespace Pacman
+namespace Pacman.Readers
 {
-	public class Class1
+	public interface IConfigurationReader
 	{
+		Configuration Read();
 	}
 }

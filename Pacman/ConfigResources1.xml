@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pacman>
+
+  <crm>
+    <crminstallation>
+      <organization name="organizationDevUrl" value="https://thymorsudv.api.crm4.dynamics.com/XRMServices/2011/Organization.svc"/>
+      <serverurl name="crmdev" value="https://thymorsudv.crm4.dynamics.com"/>
+    </crminstallation>
+    <entities>
+      <entity name="Contact" />
+      <entity name="Installation"/>
+    </entities>
+  </crm>
+</pacman>
