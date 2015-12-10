@@ -1,7 +1,0 @@
-﻿{
-  "Crmorganization" : "https://thymorsudv.api.crm4.dynamics.com/XRMServices/2011/Organization.svc",
-  "Crmserverurl": "https://thymorsudv.crm4.dynamics.com",
-  "Entities" : ["Contact", "Installation"]
-  
-
-}

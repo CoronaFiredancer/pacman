@@ -5,35 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using Pacman;
+using Pacman.CrmPlumbing;
 using Pacman.Readers;
 
 namespace PacmanConsole
 {
 	class Program
 	{
-		private static IContainer Container { get; set; }
-
 		static void Main(string[] args)
 		{
-			var builder = new ContainerBuilder();
+			Setup.SetItUp();
 
-			builder.RegisterType<ConfigurationReader>().As<IConfigurationReader>();
+			var x = Setup.GetConfiguration();
 
-			Container = builder.Build();
-
-			var x = GetConfiguration();
+			var y = OrganizationServiceManager.Instance(x);
 
 			Console.ReadKey();
-		}
-
-		public static Configuration GetConfiguration()
-		{
-			using (var scope = Container.BeginLifetimeScope())
-			{
-				var configReader = scope.Resolve<IConfigurationReader>();
-
-				return configReader.Read();
-			}
 		}
 	}
 }

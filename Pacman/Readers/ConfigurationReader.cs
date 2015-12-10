@@ -15,7 +15,7 @@ namespace Pacman
 		public Configuration Read()
 		{
 			var exectutingPath = AssemblyDirectory;
-			var fileName = "Configuration2.json";
+			const string fileName = "Configuration.json";
 			var path = Path.Combine(exectutingPath, fileName);
 
 			var text = File.ReadAllText(path);

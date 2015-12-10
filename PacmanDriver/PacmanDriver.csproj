@@ -336,6 +336,12 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pacman\Pacman.csproj">
+      <Project>{17ad2882-e7c3-4d8f-8be2-b1f090966f29}</Project>
+      <Name>Pacman</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

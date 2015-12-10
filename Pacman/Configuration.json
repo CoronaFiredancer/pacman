@@ -1,0 +1,7 @@
+﻿{
+  "Crmorganization": "https://thymorsudv.api.crm4.dynamics.com/XRMServices/2011/Organization.svc",
+  "Crmpassword": "Pro$$active",
+  "Crmserverurl": "https://thymorsudv.crm4.dynamics.com",
+  "Crmusername": "proactive@jaegerne.onmicrosoft.com",
+  "Entities": [ "Contact", "Installation" ]
+}
