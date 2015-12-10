@@ -3,5 +3,5 @@
   "Crmpassword": "Pro$$active",
   "Crmserverurl": "https://thymorsudv.crm4.dynamics.com",
   "Crmusername": "sel@thymors.onmicrosoft.com",
-  "Entities": [ "Contact", "Installation" ]
+  "Entities": [ "account", "Installation" ]
 }

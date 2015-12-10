@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xrm.Client;
+using Microsoft.Xrm.Sdk;
 
 namespace Pacman.BusinessLogic
 {
@@ -15,9 +16,17 @@ namespace Pacman.BusinessLogic
 			this._repository = repository;
 		}
 
-		public CrmEntity FetchEntity<T>()
+		public CrmEntity FetchEntityType(string entityName)
 		{
-			return _repository.Fetch<T>();
+			return _repository.FetchType(entityName);
+		}
+
+		public Entity FetchEntity(string entityName)
+		{
+
+			var entity = _repository.Fetch(entityName);
+
+			return entity;
 		}
 	}
 }

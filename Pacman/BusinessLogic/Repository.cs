@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xrm.Client;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Query;
 using Pacman.CrmPlumbing;
 
 namespace Pacman.BusinessLogic
@@ -13,14 +14,24 @@ namespace Pacman.BusinessLogic
 	{
 		private readonly IOrganizationService _service;
 
-		public Repository(IConfiguration configuration)
+		public Repository()
 		{
+			var configuration = Setup.GetConfiguration();
+
 			_service = OrganizationServiceManager.Instance(configuration);
 		}
 
-		public CrmEntity Fetch<T>()
+		public Entity Fetch(string entityName)
 		{
-			var e = new CrmEntity(typeof(T).Name);
+			var attributes = new ColumnSet("pa_name2");
+			var entity = _service.Retrieve(entityName, new Guid("4B6AB95B-FF00-4D1A-8A6C-000AECDDB1BC"), attributes);
+
+			return entity;
+		}
+
+		public CrmEntity FetchType(string entityName)
+		{
+			var e = new CrmEntity(entityName);
 
 			return e;
 		}

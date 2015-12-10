@@ -24,9 +24,19 @@ namespace PacmanWebAPI.Controllers
 			Setup.SetItUp();
 
 			var configuration = Pacman.Setup.GetConfiguration();
-			var manager = Pacman.Setup.Container.Resolve<ApiManager>();
 
-			return "value";
+			var manager = Pacman.Setup.Container.Resolve<IApiManager>();
+
+			var x = configuration.Entities[0];
+
+			var a = manager.FetchEntityType(x);
+
+
+
+
+			var entity = manager.FetchEntity(x);
+
+			return entity.LogicalName;
 		}
 
 		// POST api/values
