@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacmanDriver", "PacmanDrive
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacmanConsole", "PacmanConsole\PacmanConsole.csproj", "{9E191FD4-754A-453D-8EEA-4640BF5A848B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacmanWebAPI", "PacmanWebAPI\PacmanWebAPI.csproj", "{18C76949-7E84-4ED2-8595-F5B362EBECFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9E191FD4-754A-453D-8EEA-4640BF5A848B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E191FD4-754A-453D-8EEA-4640BF5A848B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E191FD4-754A-453D-8EEA-4640BF5A848B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C76949-7E84-4ED2-8595-F5B362EBECFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C76949-7E84-4ED2-8595-F5B362EBECFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C76949-7E84-4ED2-8595-F5B362EBECFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C76949-7E84-4ED2-8595-F5B362EBECFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
