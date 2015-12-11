@@ -3,5 +3,21 @@
   "Crmpassword": "Pro$$active",
   "Crmserverurl": "https://thymorsudv.crm4.dynamics.com",
   "Crmusername": "sel@thymors.onmicrosoft.com",
-  "Entities": [ "account", "Installation" ]
+  "Entities": [
+    {
+      "EntityName": "account",
+      "Attributes": [
+        "telephone1",
+        "pa_name2",
+        "pa_sonwin_update_timestamp"
+      ]
+    },
+    {
+      "EntityName": "pa_installation",
+      "Attributes": [
+        "pa_account_installationid",
+        "pa_installation_number"
+      ]
+    }
+  ]
 }

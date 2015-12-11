@@ -10,8 +10,8 @@ namespace Pacman.BusinessLogic
 {
 	public interface IRepository
 	{
-		Entity Fetch(string entityName);
-		CrmEntity FetchType(string entityName);
+		Entity Fetch(JsonEntity entity, Guid guid);
+		CrmEntity FetchType(string entityName, string[] attributes);
 		IList<CrmEntity> FetchList<T>();
 	}
 }

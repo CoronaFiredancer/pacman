@@ -12,7 +12,13 @@ namespace Pacman
 		public string Crmserverurl { get; set; }
 		public string Crmusername { get; set; }
 		public string Crmpassword { get; set; }
-		public string[] Entities { get; set; }
+		public JsonEntity[] Entities { get; set; }
+	}
+
+	public class JsonEntity
+	{
+		public string EntityName { get; set; }
+		public string[] Attributes { get; set; }
 	}
 
 	public interface IConfiguration
@@ -21,7 +27,7 @@ namespace Pacman
 		string Crmserverurl { get; set; }
 		string Crmusername { get; set; }
 		string Crmpassword { get; set; }
-		string[] Entities { get; set; }
+		JsonEntity[] Entities { get; set; }
 
 	}
 }

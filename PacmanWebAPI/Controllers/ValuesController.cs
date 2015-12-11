@@ -23,18 +23,19 @@ namespace PacmanWebAPI.Controllers
 		{
 			Setup.SetItUp();
 
-			var configuration = Pacman.Setup.GetConfiguration();
+			var configuration = Setup.GetConfiguration();
 
-			var manager = Pacman.Setup.Container.Resolve<IApiManager>();
+			var manager = Setup.Container.Resolve<IApiManager>();
 
 			var x = configuration.Entities[0];
+
 
 			var a = manager.FetchEntityType(x);
 
 
 
 
-			var entity = manager.FetchEntity(x);
+			var entity = manager.FetchEntity(x, new Guid("4B6AB95B-FF00-4D1A-8A6C-000AECDDB1BC"));
 
 			return entity.LogicalName;
 		}

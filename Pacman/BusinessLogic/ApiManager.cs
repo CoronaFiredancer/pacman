@@ -16,17 +16,17 @@ namespace Pacman.BusinessLogic
 			this._repository = repository;
 		}
 
-		public CrmEntity FetchEntityType(string entityName)
+		public CrmEntity FetchEntityType(JsonEntity entity)
 		{
-			return _repository.FetchType(entityName);
+			return _repository.FetchType(entity.EntityName, entity.Attributes);
 		}
 
-		public Entity FetchEntity(string entityName)
+		public Entity FetchEntity(JsonEntity entity, Guid guid)
 		{
 
-			var entity = _repository.Fetch(entityName);
+			var crmentity = _repository.Fetch(entity, guid);
 
-			return entity;
+			return crmentity;
 		}
 	}
 }
