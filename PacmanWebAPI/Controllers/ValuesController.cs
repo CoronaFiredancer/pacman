@@ -19,11 +19,11 @@ namespace PacmanWebAPI.Controllers
 		}
 
 		// GET api/values/5
-		public string Get(int id)
+		public string Get(Guid id)
 		{
-			Setup.SetItUp();
+			//Setup.SetItUp();
 
-			var configuration = Setup.GetConfiguration();
+			var configuration = Setup.Configuration;
 
 			var manager = Setup.Container.Resolve<IApiManager>();
 

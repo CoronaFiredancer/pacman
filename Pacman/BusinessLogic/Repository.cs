@@ -28,6 +28,7 @@ namespace Pacman.BusinessLogic
 			var attributes = new ColumnSet(jsonEntity.Attributes);
 			var entity = _service.Retrieve(jsonEntity.EntityName, guid, attributes);
 
+
 			return entity;
 		}
 
@@ -51,6 +52,8 @@ namespace Pacman.BusinessLogic
 			{
 				filteredList = attributeList.Where(x => list.Any(y => y == x.LogicalName)).ToList();
 			}
+
+
 
 			var listCount = filteredList.Count;
 
