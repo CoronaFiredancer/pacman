@@ -28,11 +28,10 @@ namespace Pacman.BusinessLogic
 			var attributes = new ColumnSet(jsonEntity.Attributes);
 			var entity = _service.Retrieve(jsonEntity.EntityName, guid, attributes);
 
-
 			return entity;
 		}
 
-		public CrmEntity FetchType(string entityName, string[] attributes = null)
+		public CrmEntity FetchType(string entityName)
 		{
 			var e = new CrmEntity(entityName);
 			
@@ -45,18 +44,11 @@ namespace Pacman.BusinessLogic
 
 			var response = (RetrieveEntityResponse) _service.Execute(req);
 
-			var attributeList = response.EntityMetadata.Attributes.ToList();
-			List<AttributeMetadata> filteredList = new List<AttributeMetadata>();
-			var list = attributes?.ToList();
-			if (list != null)
-			{
-				filteredList = attributeList.Where(x => list.Any(y => y == x.LogicalName)).ToList();
-			}
+			
+			var attributeList = response.EntityMetadata.Attributes;
+			e.Attributes = new AttributeCollection();
 
-
-
-			var listCount = filteredList.Count;
-
+			//e.Attributes = attributeList;
 
 			return e;
 		}

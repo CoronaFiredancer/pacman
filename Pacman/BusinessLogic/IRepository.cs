@@ -11,7 +11,7 @@ namespace Pacman.BusinessLogic
 	public interface IRepository
 	{
 		Entity Fetch(JsonEntity entity, Guid guid);
-		CrmEntity FetchType(string entityName, string[] attributes);
+		CrmEntity FetchType(string entityName);
 		IList<CrmEntity> FetchList<T>();
 	}
 }

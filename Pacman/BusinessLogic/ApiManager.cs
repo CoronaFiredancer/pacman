@@ -18,7 +18,7 @@ namespace Pacman.BusinessLogic
 
 		public CrmEntity FetchEntityType(JsonEntity entity)
 		{
-			return _repository.FetchType(entity.EntityName, entity.Attributes);
+			return _repository.FetchType(entity.EntityName);
 		}
 
 		public Entity FetchEntity(JsonEntity entity, Guid guid)

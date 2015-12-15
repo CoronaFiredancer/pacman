@@ -12,32 +12,31 @@ namespace PacmanWebAPI.Controllers
 {
 	public class ValuesController : ApiController
 	{
-		// GET api/values
-		public IEnumerable<string> Get()
-		{
-			return new string[] { "value1", "value2" };
-		}
-
 		// GET api/values/5
-		public string Get(Guid id)
+		public IHttpActionResult Get(Guid id)
 		{
-			//Setup.SetItUp();
-
 			var configuration = Setup.Configuration;
 
 			var manager = Setup.Container.Resolve<IApiManager>();
 
-			var x = configuration.Entities[0];
+			var jsonEntity = configuration.Entities.First(x => x.EntityName == "account");
 
+			var entity = manager.FetchEntity(jsonEntity, id);
 
-			var a = manager.FetchEntityType(x);
+			return Ok(entity);
+		}
 
+		public IHttpActionResult Get()
+		{
+			var configuration = Setup.Configuration;
 
+			var manager = Setup.Container.Resolve<IApiManager>();
 
+			var jsonEntity = configuration.Entities.First(x => x.EntityName == "account");
 
-			var entity = manager.FetchEntity(x, new Guid("4B6AB95B-FF00-4D1A-8A6C-000AECDDB1BC"));
+			var a = manager.FetchEntityType(jsonEntity);
 
-			return entity.LogicalName;
+			return Ok(a);
 		}
 
 		// POST api/values
